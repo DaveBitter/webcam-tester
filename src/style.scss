@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -34,5 +38,15 @@ body {
         border-radius: 0.5rem;
         color: #ffffff;
         background-color: rgba(#000000, 0.5);
+        transition:
+            opacity 200ms ease-out,
+            transform 200ms ease-out;
+
+        &:not(:focus)[data-controls-visible='false'] {
+            [data-has-js='true'] & {
+                opacity: 0;
+                transform: translateY(1rem);
+            }
+        }
     }
 }
