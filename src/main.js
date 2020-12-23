@@ -10,6 +10,7 @@ document.documentElement.dataset.hasJs = 'true';
     const videoDevices = mediaDevices.filter(mediaDevice => mediaDevice.kind === 'videoinput');
     const controlsVisibilityTimeout = 2000;
     let currentStream;
+    let count = 0;
 
     const stopMediaTracks = stream => stream.getTracks().forEach(track => track.stop());
 
@@ -58,7 +59,7 @@ document.documentElement.dataset.hasJs = 'true';
         }
     };
 
-    const renderOptions = () => videoDevices.forEach(videoDevice => {
+    const renderOptions = () => videoDevices.forEach((videoDevice) => {
         const option = document.createElement('option');
         const label = videoDevice.label || `Camera ${count++}`;
         const textNode = document.createTextNode(label);

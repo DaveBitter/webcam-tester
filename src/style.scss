@@ -1,11 +1,60 @@
+@font-face {
+	font-family: 'Public Sans';
+	src:
+   		local('Public Sans Light'),
+		local('PublicSans-Light'),
+		url('/public/fonts/public-sans/PublicSans-Regular.woff2') format('woff2'),
+		url('/public/fonts/public-sans/PublicSans-Regular.woff') format('woff');
+	font-weight: 200;
+	font-style: normal;
+	font-display: block;
+}
+
+@font-face {
+	font-family: 'Public Sans';
+	src:
+   		local('Public Sans Regular'),
+		local('PublicSans-Regular'),
+		url('/public/fonts/public-sans/PublicSans-Medium.woff2') format('woff2'),
+		url('/public/fonts/public-sans/PublicSans-Medium.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: block;
+}
+
+@font-face {
+	font-family: 'Public Sans';
+	src:
+   		local('Public Sans Bold'),
+		local('PublicSans-Bold'),
+		url('/public/fonts/public-sans/PublicSans-SemiBold.woff2') format('woff2'),
+		url('/public/fonts/public-sans/PublicSans-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: block;
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    color: #ffffff;
+    background-color: #000000;
+    font-family: 'Public Sans', 'Open Sans', sans-serif;
+}
+
+.no-script {
+    [data-has-js='true'] & {
+        display: none;
+    }
 }
 
 .webcam {
@@ -16,6 +65,10 @@ body {
     align-items: flex-end;
     width: 100vw;
     height: 100vh;
+
+    [data-has-js='false'] & {
+        display: none;
+    }
 
     &__video {
         position: absolute;

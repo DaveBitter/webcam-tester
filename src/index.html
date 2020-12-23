@@ -1,13 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html data-has-js='false'>
     <head>
+    <meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
+    <meta httpEquiv='content-language' content='en' />
+    <meta name='viewport' id='viewporttag' content='width=device-width, user-scalable=no, initial-scale=1' />
+
+    <link rel='apple-touch-icon' sizes='57x57' href='/public/img/favicons/apple-icon-57x57.png' />
+    <link rel='apple-touch-icon' sizes='60x60' href='/public/img/favicons/apple-icon-60x60.png' />
+    <link rel='apple-touch-icon' sizes='72x72' href='/public/img/favicons/apple-icon-72x72.png' />
+    <link rel='apple-touch-icon' sizes='76x76' href='/public/img/favicons/apple-icon-76x76.png' />
+    <link rel='apple-touch-icon' sizes='114x114' href='/public/img/favicons/apple-icon-114x114.png' />
+    <link rel='apple-touch-icon' sizes='120x120' href='/public/img/favicons/apple-icon-120x120.png' />
+    <link rel='apple-touch-icon' sizes='144x144' href='/public/img/favicons/apple-icon-144x144.png' />
+    <link rel='apple-touch-icon' sizes='152x152' href='/public/img/favicons/apple-icon-152x152.png' />
+    <link rel='apple-touch-icon' sizes='180x180' href='/public/img/favicons/apple-icon-180x180.png' />
+    <link rel='icon' type='image/png' sizes='192x192' href='/public/img/favicons/android-icon-192x192.png' />
+    <link rel='icon' type='image/png' sizes='32x32' href='/public/img/favicons/favicon-32x32.png' />
+    <link rel='icon' type='image/png' sizes='96x96' href='/public/img/favicons/favicon-96x96.png' />
+    <link rel='icon' type='image/png' sizes='16x16' href='/public/img/favicons/favicon-16x16.png' />
+
+    <meta name='msapplication-TileColor' content='#222222' />
+    <meta name='msapplication-TileImage' content='/public/img/favicons/ms-icon-144x144.png' />
+
+    <meta name='theme-color' content='#222222'></meta>
+    <link rel='manifest' href='/manifest.webmanifest' />
+
+    <title>Dave Bitter | Webcam Tester</title>
+    <meta name='description' content='A simple interface to test your webcam by Dave Bitter' />
+
     <link rel='stylesheet' type='text/css' href='style.scss'>
-        <script src='main.js' defer></script>
+    <script src='main.js' defer></script>
     </head>
+
     <body>
         <div class='webcam' data-webcam>
-            <select class="webcam__select" data-select></select>
+            <select class='webcam__select' data-select></select>
             <video class='webcam__video' autoplay='true' data-video></video>
         </div>
+
+        <noscript class='no-script'>You need to enable JavaScript as this website needs to access your webcam programmatically.</noscript>
+
+         <script>
+            const sw = 'sw.js'; // it is needed because parcel will not recognize this as a file and not precess in its manner
+
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker
+                    .register(sw);
+            }
+        </script>
     </body>
 </html>
