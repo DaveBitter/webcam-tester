@@ -25,7 +25,7 @@
     <meta name='theme-color' content='#222222'></meta>
     <link rel='manifest' href='/manifest.webmanifest' />
 
-    <title>Dave Bitter | Webcam Tester</title>
+    <title>Dave Bitter | Webcam Test</title>
     <meta name='description' content='A simple interface to test your webcam by Dave Bitter' />
 
     <link rel='stylesheet' type='text/css' href='style.scss'>
@@ -33,6 +33,17 @@
     </head>
 
     <body>
+        <header class='header'>
+            <div class='header__item'>
+                <a class='header__link' href='https://www.davebitter.com' target='_blank' rel='noopener noreferrer'>Visit my website</a>
+                <img class='header__img' src='/public/img/logo.png' alt='Bright orange and red blob logo'></img>
+            </div>
+            <div class='header__item'>
+                <a class='header__link' href='https://github.com/DaveBitter/webcam-tester' target='_blank' rel='noopener noreferrer'>View repository on GitHub</a>
+                <img class='header__img' src='/public/img/icons/github.svg' alt='GitHub logo'></img>
+            </div>
+        </header>
+
         <div class='webcam' data-webcam>
             <select class='webcam__select' data-select></select>
             <video class='webcam__video' autoplay='true' data-video></video>

@@ -16,11 +16,11 @@ document.documentElement.dataset.hasJs = 'true';
 
     let timeout;
     const onPointerMove = () => {
-        selectElement.dataset.controlsVisible = 'true';
+        document.documentElement.dataset.controlsVisible = 'true';
         clearTimeout(timeout);
 
         timeout = setTimeout(() => {
-            selectElement.dataset.controlsVisible = 'false';
+            document.documentElement.dataset.controlsVisible = 'false';
         }, controlsVisibilityTimeout);
     }
 

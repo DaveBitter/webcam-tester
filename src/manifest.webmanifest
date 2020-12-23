@@ -1,6 +1,6 @@
 {
-    "name": "Webcam Tester",
-    "short_name": "Webcam Tester",
+    "name": "Webcam Test",
+    "short_name": "Webcam Test",
     "description": "A simple interface to test your webcam by Dave Bitter",
     "scope": "/",
     "start_url": "/",

@@ -1,2 +1,2 @@
 # webcam-tester
-A simple webcam tester to see if you look pretty
+A simple Webcam Test to see if you look pretty
