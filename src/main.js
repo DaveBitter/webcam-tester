@@ -3,6 +3,8 @@ import 'regenerator-runtime/runtime';
 document.documentElement.dataset.hasJs = 'true';
 
 (async () => {
+    await navigator.mediaDevices.getUserMedia({ video: true });
+
     const root = document.querySelector('[data-webcam]');
     const selectElement = root.querySelector('[data-select]');
     const videoElement = root.querySelector('[data-video]');
